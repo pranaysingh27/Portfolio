@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0812">
+  <meta name="description" content="Pranay Sumit Singh — BSc IT student exploring technology, creative design, and digital innovation.">
+  <title>Pranay Sumit Singh | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b0812;--panel:#130e1d;--panel2:#191126;--text:#f6f1ff;--muted:#aaa0bd;--purple:#a879ff;--purple2:#7c3aed;--line:#30223f;--glow:rgba(168,121,255,.23)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:88px}
+    body{margin:0;background:radial-gradient(ellipse at 75% 0%,rgba(112,55,190,.13),transparent 35%),var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none} button{font:inherit}
+    .wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(11,8,18,.78);backdrop-filter:blur(18px);border-bottom:1px solid rgba(168,121,255,.12)}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:.03em}
+    .brand-mark{display:grid;place-items:center;width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,#c5a5ff,#6d28d9);color:#10091b;box-shadow:0 0 24px var(--glow)}
+    .navlinks{display:flex;gap:24px;color:var(--muted);font-size:.92rem}.navlinks a:hover{color:var(--text)}
+    .menu{display:none;background:transparent;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+    .hero{min-height:calc(88vh - 72px);display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:50px;padding:72px 0 82px}
+    .eyebrow{color:#c7a8ff;text-transform:uppercase;letter-spacing:.18em;font-size:.76rem;font-weight:700}
+    h1,h2,h3{font-family:'Space Grotesk',sans-serif;line-height:1.1;letter-spacing:-.035em}
+    h1{font-size:clamp(3rem,7vw,5.8rem);margin:18px 0 22px} h1 span{color:var(--purple)}
+    .lead{font-size:1.12rem;color:#c5bbd5;max-width:610px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 18px;border-radius:13px;border:1px solid var(--line);font-weight:700;transition:.25s}
+    .btn.primary{background:linear-gradient(135deg,#c4a3ff,#8b5cf6);color:#160d24;border:0;box-shadow:0 8px 30px rgba(124,58,237,.2)}
+    .btn:hover{transform:translateY(-3px);border-color:#8f65c9}
+    .social-proof{display:flex;align-items:center;gap:10px;margin-top:30px;color:var(--muted);font-size:.88rem}
+    .dot{width:8px;height:8px;border-radius:50%;background:#a879ff;box-shadow:0 0 12px #a879ff}
+    .visual{min-height:420px;position:relative;display:grid;place-items:center;isolation:isolate}
+    .visual:before,.visual:after{content:"";position:absolute;border:1px solid rgba(168,121,255,.22);border-radius:50%;width:310px;height:310px;animation:spin 22s linear infinite}
+    .visual:after{width:390px;height:390px;border-style:dashed;animation-direction:reverse;animation-duration:38s}
+    .orb{width:min(300px,72vw);aspect-ratio:1;border-radius:42% 58% 57% 43% / 43% 43% 57% 57%;background:radial-gradient(circle at 30% 25%,#e1caff 0,#a879ff 15%,#6d28d9 42%,#25113f 72%,#100819 100%);box-shadow:inset -25px -25px 55px rgba(0,0,0,.5),inset 15px 15px 45px rgba(255,255,255,.17),0 0 100px rgba(124,58,237,.35);animation:float 7s ease-in-out infinite;position:relative;z-index:2}
+    .orb:before{content:"";position:absolute;inset:13%;border-radius:50%;border:1px solid rgba(255,255,255,.26);transform:rotate(-24deg) scaleX(1.4)}
+    .orbit-tag{position:absolute;z-index:3;background:rgba(23,15,34,.88);border:1px solid #44305b;padding:10px 14px;border-radius:14px;color:#e7d8ff;font-size:.84rem;box-shadow:0 12px 35px rgba(0,0,0,.25)}
+    .tag1{top:13%;left:2%}.tag2{right:0;top:27%}.tag3{bottom:13%;left:8%}
+    section{padding:82px 0}.section-head{max-width:650px;margin-bottom:32px}.section-head h2{font-size:clamp(2.1rem,4vw,3.1rem);margin:12px 0}.section-head p{color:var(--muted);margin:0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:linear-gradient(145deg,rgba(25,17,38,.95),rgba(16,11,24,.95));border:1px solid var(--line);border-radius:20px;padding:23px;transition:transform .25s,border-color .25s;min-width:0}
+    .card:hover{transform:translateY(-5px);border-color:#7752a2}
+    .iconbox{display:grid;place-items:center;width:44px;height:44px;border-radius:14px;background:rgba(168,121,255,.12);color:#c6a6ff;font-size:1.25rem;margin-bottom:17px}
+    .card h3{font-size:1.25rem;margin:0 0 10px}.card p{color:var(--muted);margin:0 0 15px;font-size:.95rem}
+    .chips{display:flex;flex-wrap:wrap;gap:7px}.chip{font-size:.75rem;padding:5px 9px;border-radius:99px;border:1px solid #40304f;color:#d6c4f3;background:rgba(168,121,255,.06)}
+    .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:start}
+    .quote{font-family:'Space Grotesk',sans-serif;font-size:1.6rem;line-height:1.35;color:#e8d8ff;border-left:3px solid var(--purple);padding-left:22px;margin:0}
+    .about-copy{color:#c4bacf}.about-copy p:first-child{margin-top:0}
+    .skill-list{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .skill{border:1px solid var(--line);background:rgba(25,17,38,.75);border-radius:14px;padding:15px;text-align:center;color:#e6d9f7;font-size:.92rem}
+    .timeline{display:grid;gap:14px}.timeline-item{display:grid;grid-template-columns:150px 1fr;gap:22px;padding:22px;border:1px solid var(--line);border-radius:18px;background:rgba(19,14,29,.8)}
+    .timeline-label{color:#c4a4ff;font-weight:700;font-size:.85rem}.timeline-item h3{margin:0 0 7px;font-size:1.15rem}.timeline-item p{margin:0;color:var(--muted)}
+    .contact-box{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:35px;border:1px solid #50366f;border-radius:24px;background:radial-gradient(circle at 90% 0%,rgba(124,58,237,.2),transparent 40%),var(--panel)}
+    .contact-box h2{font-size:clamp(2rem,4vw,3rem);margin:10px 0}.contact-box p{color:var(--muted);max-width:600px}
+    footer{padding:25px 0 38px;color:#857b95;font-size:.84rem;border-top:1px solid rgba(168,121,255,.12)}
+    .footer-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
+
+    .portrait-frame{position:relative;z-index:2;width:min(330px,78vw);height:420px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;border:1px solid rgba(168,121,255,.35);border-radius:48% 48% 24px 24px;background:radial-gradient(circle at 50% 30%,rgba(168,121,255,.22),rgba(25,17,38,.65) 65%);box-shadow:0 0 75px rgba(124,58,237,.2)}
+    .portrait-frame img{width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 15px 35px rgba(0,0,0,.4))}
+    .cert-card{overflow:hidden;padding:0}.cert-card img{width:100%;height:190px;object-fit:cover;object-position:top center;background:#eee;display:block;border-bottom:1px solid var(--line)}.cert-body{padding:20px}.cert-body h3{margin:0 0 8px}.cert-body p{color:var(--muted);font-size:.9rem;margin:0 0 14px}.text-link{color:#c7a8ff;font-weight:700;font-size:.9rem}.text-link:hover{text-decoration:underline}
+\n    @keyframes float{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-15px) rotate(5deg)}}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    @media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:60px;gap:10px}.visual{min-height:360px}.visual:after{width:320px;height:320px}.visual:before{width:260px;height:260px}.grid{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr}.skill-list{grid-template-columns:repeat(3,1fr)}.contact-box{align-items:flex-start;flex-direction:column}}
+    @media(max-width:600px){.wrap{width:min(100% - 30px,1120px)}nav{height:64px}.navlinks{display:none;position:absolute;top:64px;left:0;right:0;padding:18px 24px;background:#100b19;border-bottom:1px solid var(--line);flex-direction:column;gap:16px}.navlinks.open{display:flex}.menu{display:block}.hero{min-height:auto;padding:62px 0 38px}h1{font-size:3.15rem}.visual{min-height:390px}.portrait-frame{height:350px;width:min(275px,78vw)}.visual:after{width:285px;height:285px}.visual:before{width:225px;height:225px}.orb{width:215px}.tag1{left:0;top:9%}.tag2{right:0;top:25%}.tag3{bottom:8%;left:0}section{padding:62px 0}.grid{grid-template-columns:1fr}.skill-list{grid-template-columns:repeat(2,1fr)}.timeline-item{grid-template-columns:1fr;gap:8px}.contact-box{padding:25px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <a class="brand" href="#home" aria-label="Pranay Singh home"><span class="brand-mark">P.</span><span>PRANAY SINGH</span></a>
+    <div class="navlinks" id="navlinks">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Projects</a><a href="#certificates">Certificates</a><a href="#journey">Journey</a><a href="#contact">Contact</a>
+    </div>
+    <button class="menu" id="menu" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+  </nav>
+</header>
+<main>
+  <section class="wrap hero" id="home">
+    <div class="hero-copy">
+      <div class="eyebrow">BSc IT Student · Creative Thinker · Future Builder</div>
+      <h1>Ideas into<br><span>digital impact.</span></h1>
+      <p class="lead">Hey, I'm Pranay — an Information Technology student exploring the space where technology, creative design, and digital innovation meet.</p>
+      <div class="actions"><a class="btn primary" href="#work">Explore my work <span>↗</span></a><a class="btn" href="#about">Get to know me</a></div>
+      <div class="social-proof"><span class="dot"></span> Learning by doing. Building with purpose.</div>
+    </div>
+    <div class="visual" aria-label="Abstract purple 3D orb illustration">
+      <div class="orbit-tag tag1">✦ Curious by nature</div><div class="orbit-tag tag2">{"<"} Code + creativity {">"}</div><div class="orbit-tag tag3">✧ Built to keep learning</div><div class="portrait-frame"><img src="assets/pranay-profile.png" alt="Portrait of Pranay Sumit Singh"></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="section-head reveal"><div class="eyebrow">A little about me</div><h2>Not just learning tech. Exploring what it can become.</h2><p>Curiosity is where every good project begins.</p></div>
+      <div class="about-copy reveal">
+        <p>I'm Pranay Sumit Singh, a BSc Information Technology student with a passion for technology, creative design, and digital innovation. I enjoy exploring new ideas, experimenting with modern tools, and turning imagination into real-world projects.</p>
+        <p>From building websites and creating event designs to exploring web development and AI-powered creative tools, I like combining technical thinking with creativity to make meaningful digital experiences.</p>
+        <p>Beyond technology, I'm involved in college activities and the National Service Scheme (NSS), where I've developed my leadership, teamwork, communication, and event-management skills.</p>
+        <p>I believe in learning by doing, thinking outside the box, and improving with every project. My ambition is to become an IT professional who combines technology, creativity, and problem-solving to make a real impact.</p>
+        <p><strong style="color:#c6a6ff">Learn. Create. Lead. Repeat.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head reveal"><div class="eyebrow">My toolkit</div><h2>Skills I'm building with.</h2><p>A growing toolkit across development, data, and creative production. I'll keep refining this list as projects and experience grow.</p></div>
+      <div class="skill-list reveal">
+        <div class="skill">HTML & CSS</div><div class="skill">JavaScript</div><div class="skill">C</div><div class="skill">C++</div>
+        <div class="skill">Python</div><div class="skill">SQL / MySQL</div><div class="skill">DBMS</div><div class="skill">Git & GitHub</div>
+        <div class="skill">Web Design</div><div class="skill">Canva</div><div class="skill">AI Creative Tools</div><div class="skill">Problem Solving</div>
+        <div class="skill">Teamwork</div><div class="skill">Communication</div><div class="skill">Leadership</div><div class="skill">Event Management</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="section-head reveal"><div class="eyebrow">Selected work</div><h2>Ideas, made real.</h2><p>A mix of web experiences, event creativity, and academic exploration. Add live links and screenshots as each project is ready to showcase.</p></div>
+      <div class="grid">
+        <article class="card reveal"><div class="iconbox">⌘</div><h3>Sanghaat 2026 Website</h3><p>A themed college-event website concept with an event schedule, registration links, gallery, countdown, and brochure access.</p><div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">GitHub</span></div><p style="margin-top:14px"><a class="text-link" href="https://github.com/pranaysingh27/sanghaat-2026-experience" target="_blank" rel="noopener noreferrer">View project on GitHub ↗</a></p></article>
+        <article class="card reveal"><div class="iconbox">✳</div><h3>Event Visual Design</h3><p>Creative concepts for college events, promotional flyers, event identity, and digital communication.</p><div class="chips"><span class="chip">Visual Design</span><span class="chip">Canva</span><span class="chip">Creative Direction</span></div></article>
+        <article class="card reveal"><div class="iconbox">⌕</div><h3>Digital Banking Study</h3><p>An academic field-project direction exploring how digital banking is changing traditional banking experiences.</p><div class="chips"><span class="chip">Research</span><span class="chip">Interviews</span><span class="chip">Analysis</span></div></article>
+      </div>
+      <p style="color:var(--muted);font-size:.85rem;margin-top:18px">Project descriptions are starter summaries. Replace or expand them with your final deliverables, screenshots, and verified links.</p>
+    </div>
+  </section>
+
+
+  <section id="certificates">
+    <div class="wrap">
+      <div class="section-head reveal"><div class="eyebrow">Learning & recognition</div><h2>Certificates & milestones.</h2><p>A selection of completed workshops, courses, college activities, and NSS participation. Open a certificate to view the original document.</p></div>
+      <div class="grid">
+        <article class="card cert-card reveal"><img src="assets/python-for-beginners.jpg" alt="Python for Beginners certificate preview"><div class="cert-body"><h3>Python for Beginners</h3><p>Course certificate · 24 June 2026</p><a class="text-link" href="assets/python-certificate.pdf" target="_blank">View certificate ↗</a></div></article>
+        <article class="card cert-card reveal"><img src="assets/ai-tools-workshop.jpg" alt="AI Tools Workshop certificate preview"><div class="cert-body"><h3>AI Tools & ChatGPT Workshop</h3><p>be10x workshop · 25 January 2026</p><a class="text-link" href="assets/ai-tools-workshop-certificate.pdf" target="_blank">View certificate ↗</a></div></article>
+        <article class="card cert-card reveal"><img src="assets/generative-ai-for-beginners.jpg" alt="Generative AI for Beginners certificate preview"><div class="cert-body"><h3>Generative AI for Beginners</h3><p>Course certificate · 27 January 2026</p><a class="text-link" href="assets/generative-ai-certificate.pdf" target="_blank">View certificate ↗</a></div></article>
+        <article class="card cert-card reveal"><img src="assets/nss-leadership-certificate.jpg" alt="NSS Leadership Training Programme certificate preview"><div class="cert-body"><h3>NSS Leadership Training Programme</h3><p>Five-day residential programme · Thane District Zone-II · December 2025</p><a class="text-link" href="assets/college-nss-certificates.pdf" target="_blank">View scanned certificates ↗</a></div></article>
+      </div>
+      <p style="color:var(--muted);font-size:.85rem;margin-top:18px">The scanned certificate PDF also includes your Youth Conclave on Road Safety participation certificate, Creative Skilling certificates, Kotlin course, and college competition participation certificates.</p>
+    </div>
+  </section>
+\n  <section id="journey">
+    <div class="wrap">
+      <div class="section-head reveal"><div class="eyebrow">Beyond the classroom</div><h2>Learning to lead, too.</h2><p>Growth happens through people, responsibility, and experiences outside the syllabus.</p></div>
+      <div class="timeline">
+        <div class="timeline-item reveal"><div class="timeline-label">EDUCATION</div><div><h3>BSc Information Technology</h3><p>Currently pursuing an undergraduate degree, building foundations in programming, databases, and web technologies.</p></div></div>
+        <div class="timeline-item reveal"><div class="timeline-label">NSS & LEADERSHIP</div><div><h3>Leadership and volunteering</h3><p>Involved in NSS and college activities, with participation in a district-level LTP camp and experience supporting teamwork and event coordination.</p></div></div>
+        <div class="timeline-item reveal"><div class="timeline-label">WHAT'S NEXT</div><div><h3>Build. Learn. Contribute.</h3><p>Growing through practical projects, new technologies, creative experimentation, and opportunities to contribute to a team.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-box reveal">
+        <div><div class="eyebrow">Let's connect</div><h2>Have an idea? Let's build.</h2><p>I'm always interested in learning, collaborating, and exploring new opportunities in technology and creative work.</p><div class="chips"><span class="chip">Internship opportunities</span><span class="chip">Projects & collaboration</span><span class="chip">Creative ideas</span></div></div>
+        <div class="actions" style="margin:0">
+          <a class="btn primary" href="mailto:singhpranaysumeet2007@gmail.com">Email me ↗</a>
+          <a class="btn" href="https://github.com/pranaysingh27" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a class="btn" href="https://www.linkedin.com/in/pranay-singh-a24a4938b/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a class="btn" href="https://www.instagram.com/pranay.27_/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap footer-row"><span>© <span id="year"></span> Pranay Sumit Singh</span><span>Designed with curiosity and a little purple.</span><a href="#home">Back to top ↑</a></div></footer>
+<script>
+  const menu = document.getElementById('menu');
+  const navlinks = document.getElementById('navlinks');
+  menu.addEventListener('click', () => {
+    const open = navlinks.classList.toggle('open');
+    menu.setAttribute('aria-expanded', String(open));
+  });
+  navlinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    navlinks.classList.remove('open'); menu.setAttribute('aria-expanded', 'false');
+  }));
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }});
+  }, {threshold: 0.12});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
